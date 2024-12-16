@@ -14,8 +14,8 @@
 #include <PlantowerPMSx003.h>
 #include <LocalDataLogger.h>
 #include <ResetButton.h>
-#include "MQ4AnalogInput.h"
-#include "VOCAnalogInput.h"
+#include <MQ4MethaneSensor.h>
+#include <AnalogVOCSensor.h>
 
 /******** End device includes ********/
 
@@ -33,8 +33,8 @@ class DeviceLoader {
         PlantowerPMSx003 pms5003{&Serial2};
         LocalDataLogger logger{};
         ResetButton reset{D4};
-        MQ4AnalogInput methanesensor{A3};
-        VOCAnalogInput vocsensor{A4};
+        MQ4MethaneSensor methanesensor{A3};
+        AnalogVOCSensor vocsensor{A4};
 
         /******** End sensor, actor, receiver object declarations ********/
 
